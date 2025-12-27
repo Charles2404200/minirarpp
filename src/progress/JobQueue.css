@@ -1,0 +1,159 @@
+.job-queue-panel {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.job-queue-panel h3 {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.job-item {
+  padding: 12px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  border-left: 4px solid #2196F3;
+}
+
+.job-item.job-status-running {
+  border-left-color: #2196F3;
+}
+
+.job-item.job-status-paused {
+  border-left-color: #ff9800;
+}
+
+.job-item.job-status-completed {
+  border-left-color: #4CAF50;
+}
+
+.job-item.job-status-failed {
+  border-left-color: #f44336;
+}
+
+.job-item.job-status-cancelled {
+  border-left-color: #ff9800;
+}
+
+.job-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.job-type {
+  font-weight: 600;
+  font-size: 13px;
+  color: #333;
+}
+
+.job-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.job-actions button {
+  padding: 4px 10px !important;
+  font-size: 12px !important;
+}
+
+.job-status-badge {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.job-status-badge.status-running {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.job-status-badge.status-paused {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.job-status-badge.status-completed {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.job-status-badge.status-failed {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.job-status-badge.status-cancelled {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.job-progress {
+  margin: 8px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #2196F3;
+  transition: width 0.2s ease;
+}
+
+.job-item.job-status-paused .progress-fill {
+  background-color: #ff9800;
+}
+
+.job-item.job-status-completed .progress-fill {
+  background-color: #4CAF50;
+}
+
+.progress-text {
+  font-size: 11px;
+  color: #666;
+  margin-top: 4px;
+  display: block;
+}
+
+.current-file {
+  font-size: 12px;
+  color: #666;
+  margin-top: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 4px;
+  font-family: monospace;
+}
+
+.job-error {
+  font-size: 12px;
+  color: #d32f2f;
+  margin-top: 6px;
+  padding: 6px;
+  background-color: #ffebee;
+  border-radius: 3px;
+}
